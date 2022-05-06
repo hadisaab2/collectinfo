@@ -539,7 +539,7 @@
     text-align: -webkit-match-parent;
     cursor: pointer;
     display: inline-block;
-    margin: 2px;
+    margin: 3px;
 }
 .option{
     background:linear-gradient(to right,#F61B65,#F51027) ;
@@ -737,7 +737,10 @@ option:focus{
         color: #fff;
         display: inline-block;
         font-size: 14px;
-        padding: 12px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        padding-left: 19px;
+        padding-right: 19px;
         cursor: pointer;
         border-right: solid 1px white;
         animation: optionpop 0.5s;
@@ -751,10 +754,10 @@ option:focus{
         color: #fff;
         display: inline-block;
         font-size: 14px;
-        padding-left: 14px;
-        padding-right: 14px;
         padding-top: 12px;
         padding-bottom: 12px;
+        padding-left: 21px;
+        padding-right: 21px;
         cursor: pointer;
         border-left: solid 1px white;
         animation: optionpop 0.5s;
@@ -821,4 +824,52 @@ option:focus{
         margin-left:5%;
     }
 html { -webkit-text-size-adjust: 100%; }
+
+.categorydiv{
+  background-color: red;
+  height:60px;
+  width:100px;
+  display: flex;
+  flex-direction: column;
+  text-align:center;
+  align-items:center;
+   padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: white;
+  border-radius:10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  animation: optionpop 0.5s;
+
+}
+.categorydiv:hover{
+  background:linear-gradient(to right,#F61B65,#F51027) ;
+  
+}
+.categorydiv:hover > .categorytitle {
+  color:#ffffff;
+}
+.categorydiv:hover > .categoryicon {
+  color:#ffffff;
+  margin-bottom:5px;
+
+
+
+}
+
+.categorytitle{
+  color:#21292ebe;
+}
+
+.categoryicon{
+  color:#21292ebe;
+  margin-bottom:5px;
+  width:30px;
+  height:30px;
+
+
+}
+
+
+
 

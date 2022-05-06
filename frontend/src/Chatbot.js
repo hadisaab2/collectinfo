@@ -149,6 +149,7 @@ export default function Chatbot({ screen }) {
 
     if (object.customcomponent != null) {
       switch (object.customcomponent) {
+        
         case "categories":
           setcomponents((oldArray) => [
             ...oldArray,

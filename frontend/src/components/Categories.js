@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { StepsContext } from "../Context/StepsContext";
 import "../css/main.css";
+import Category from "./Category";
 
 export default function Categories(props) {
     /*const interests=[
@@ -16,10 +17,10 @@ export default function Categories(props) {
   const [divchange, setdivchange]=useState(false)
 
   
-    const interestclick = (e) =>{
+    const interestclick = (categoryname) =>{
         setdivchange(true)
-        setinterestclicked(e.target.outerText)
-        switch(e.target.outerText) {
+        setinterestclicked(categoryname)
+        switch(categoryname) {
             case "Messaging" :
                 props.loopsteps("Messaging")
                 break;
@@ -35,16 +36,20 @@ export default function Categories(props) {
                 break;
         }
 
-    setinterests(interests.filter((item) => item.value !== e.target.outerText)); 
+    setinterests(interests.filter((item) => item.value !== categoryname)); 
     }
     
   if(!divchange){
   return (
+
+    
       <div className="interestsouter">
         <ul className="ul">
           {interests.map((interest) => {
             return (
               <li className="li">
+                <Category categoryname={interest.value} categoryclick={interestclick}  />
+                {/*
                 <button
                   className="option"
                   onClick={interestclick}
@@ -52,11 +57,13 @@ export default function Categories(props) {
                 >
                   {interest.value}
                 </button>
+            */}
               </li>
             );
           })}
         </ul>
       </div>
+      
   );
   }else {
     return(
